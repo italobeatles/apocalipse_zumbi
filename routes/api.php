@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('sobreviventes', 'api\SobreviventesC');
+Route::apiResource('informar_contaminacao', 'api\InformarZumbificacaoC');
+

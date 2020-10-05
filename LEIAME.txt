@@ -24,3 +24,13 @@ ____________________________________________________________________________
 A atualização deve ser feita por meio de um PUT em http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes/{ID DO SOBREVIVENTE}
 ____________________________________________________________________________
 4 - Para remover um sobrevivente, um DELETE deve ser enviado para http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes/{ID DO SOBREVIVENTE}
+_____________________________________________________________________________
+5 - Informar a contaminação de um sobrevivente
+Para informar a contaminação de um sobrevivente, um POST deverá ser enviado para http://34.95.239.198/apocalipse_zumbi/server.php/api/informar_contaminacao com os seguintes parâmetros:
+id_sobrevivente => INTEGER (o sobrevivente que foi contaminado)
+id_informante => INTEGER (o informante)
+
+Um mesmo informante não pode dar mais de um aviso de contaminação para um mesmo sobrevivente contaminado.
+Após 3 avisos, o sobrevivente contaminado será marcado como zumbi (atributo zumbi será TRUE).
+______________________________________________________________________________
+

@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+#Route::get('/', 'TesteC@index');
+#Route::get('/informar_contaminacao', 'Controller@index');
+#Route::get('/api/informar_contaminacao', 'api\SobreviventesC@informarContaminacao');
