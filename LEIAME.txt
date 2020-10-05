@@ -1,0 +1,26 @@
+1 - API principal
+A API principal se encontra em http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes
+
+Com o Postman:
+GET => Exibe todos os sobreviventes cadastrador
+POST => Cadastrar um novo sobrevivente. As keys devem ser enviadas da seguinte forma:
+
+nome => STRING
+idade => INTEGER
+sexo => CHAR (M ou F)
+latitude => DOUBLE
+longitude => DOUBLE
+zumbi => BOOLEAN (por padrão, envie 0. Esse campo informa se o sobrevivente foi infectado ou não)
+
+Para enviar os recursos do novo sobrevivente cadastrado, envie também junto a query de cadastro do sobrevivente:
+
+id_recurso[] => INTEGER (1 para Água, 2 para Comida, 3 para Medicação e 4 para Munição)
+quantidade[] => INTEGER (se refere a quantidade de recursos que o novo sobrevivente tem)
+____________________________________________________________________________
+2 - Visualizando um sobrevivente
+Os sobreviventes podem ser visualizados por meio de um GET em  http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes/{ID DO SOBREVIVENTE}
+____________________________________________________________________________
+3 - Atualizando a localização de um sobrevivente:
+A atualização deve ser feita por meio de um PUT em http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes/{ID DO SOBREVIVENTE}
+____________________________________________________________________________
+4 - Para remover um sobrevivente, um DELETE deve ser enviado para http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes/{ID DO SOBREVIVENTE}

@@ -17,7 +17,7 @@ class SobreviventesC extends Controller {
 	public function index() {
 		return SobreviventesM::all();
 	}
-	
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -75,7 +75,7 @@ class SobreviventesC extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function edit($id) {
-
+		
 	}
 
 	/**
@@ -103,9 +103,9 @@ class SobreviventesC extends Controller {
 	 */
 	public function destroy($id) {
 		try {
-			$sobrevivente = SobreviventesM::find($id);
+			$obj = new SobreviventesM();
+			$obj->removerSobrevivente((int) $id);
 			print json_encode(array('status' => 'OK'));
-			$sobrevivente->delete();
 		} catch (ErrorException $e) {
 			print json_encode(array('status' => $e->getMessage()));
 		}

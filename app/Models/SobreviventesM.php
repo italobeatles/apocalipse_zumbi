@@ -15,4 +15,9 @@ class SobreviventesM extends Model {
 		print_r($rs);
 		print '</pre>';
 	}
+	
+	public function removerSobrevivente($id){
+		$this->query("DELETE FROM tbsobreviventes_recursos WHERE id_sobrevivente = '{$id}'");
+		$this->query("DELETE FROM tbsobreviventes WHERE id = '{$id}'");
+	}
 }
