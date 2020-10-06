@@ -69,16 +69,6 @@ class SobreviventesC extends Controller {
 	}
 
 	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function edit($id) {
-		
-	}
-
-	/**
 	 * Update the specified resource in storage.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
@@ -111,6 +101,11 @@ class SobreviventesC extends Controller {
 		}
 	}
 
+	/**
+	 *Função que salva no banco de dados um aviso de contaminação
+	 * @param $request Request
+	 * @return void
+	 * 	 */
 	public function informarContaminacao(Request $request) {
 		$id_informante = $request->id_informante;
 		$id_sobrevivente = $request->id_sobrevivente;
