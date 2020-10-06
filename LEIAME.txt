@@ -1,0 +1,57 @@
+1 - API principal
+	1.1 - A API principal se encontra em http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes
+
+	Com o Postman:
+	GET => Exibe todos os sobreviventes cadastrador
+	POST => Cadastrar um novo sobrevivente. As keys devem ser enviadas da seguinte forma:
+
+	nome => STRING
+	idade => INTEGER
+	sexo => CHAR (M ou F)
+	latitude => DOUBLE
+	longitude => DOUBLE
+	zumbi => BOOLEAN (por padrão, envie 0. Esse campo informa se o sobrevivente foi infectado ou não)
+
+	1.2 - Para enviar os recursos do novo sobrevivente cadastrado, envie também junto a query de cadastro do sobrevivente:
+
+	id_recurso[] => INTEGER (1 para Água, 2 para Comida, 3 para Medicação e 4 para Munição)
+	quantidade[] => INTEGER (se refere a quantidade de recursos que o novo sobrevivente tem)
+____________________________________________________________________________
+2 - Visualizando um sobrevivente
+	2.1 - Os sobreviventes podem ser visualizados por meio de um GET em  http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes/{ID DO SOBREVIVENTE}
+____________________________________________________________________________
+3 - Atualizando a localização de um sobrevivente:
+	3.1 - A atualização deve ser feita por meio de um PUT em http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes/{ID DO SOBREVIVENTE}
+____________________________________________________________________________
+4 - Remover um sobrevivente
+	4.1 - Para remover um sobrevivente, um DELETE deve ser enviado para http://34.95.239.198/apocalipse_zumbi/server.php/api/sobreviventes/{ID DO SOBREVIVENTE}
+_____________________________________________________________________________
+5 - Informar a contaminação de um sobrevivente
+	5.1 - Para informar a contaminação de um sobrevivente, um POST deverá ser enviado para http://34.95.239.198/apocalipse_zumbi/server.php/api/informar_contaminacao com os seguintes parâmetros:
+	id_sobrevivente => INTEGER (o sobrevivente que foi contaminado)
+	id_informante => INTEGER (o informante)
+
+	Um mesmo informante não pode dar mais de um aviso de contaminação para um mesmo sobrevivente contaminado.
+	Após 3 avisos, o sobrevivente contaminado será marcado como zumbi (atributo zumbi será TRUE).
+______________________________________________________________________________
+6 - Inventário
+	6.1 - Para exibir o inventário de todos os sobreviventes, envie um GET para http://34.95.239.198/apocalipse_zumbi/server.php/api/inventario
+	6.2 - Para exibir o inventário de um único sobrevivente, envie um GET para http://34.95.239.198/apocalipse_zumbi/server.php/api/inventario/{ID DO SOBREVIVENTE}
+	6.3 - Para realizar a troca de ítens dos inventários, envie um PUT para http://34.95.239.198/apocalipse_zumbi/server.php/api/inventario com os sequintes parâmetros:
+	id_sobrevivente[0] => INTEGER
+	id_sobrevivente[1] => INTEGER
+	recursos_troca[0] => STRING *
+	recursos_troca[1] => STRING *
+	* O parâmetro recursos_troca deve ser preenchido por um JSON no formato de STRING da seguinte forma:
+	[
+		{"id_recurso": INTEGER, "quantidade": INTEGER},
+		{"id_recurso": INTEGER, "quantidade": INTEGER},
+		...
+	]
+______________________________________________________________________________
+7 - Relatório
+	7.1 - Para exibir o relatório geral, envie um GET para http://127.0.0.1/apocalipse_zumbi/server.php/api/relatorio
+	O relatório retorna um JSON com as seguintes informações:
+	1 - Quantidade/porcentagem do total de recursos disponíveis por pessoa não infectada
+	2 - Média de recursos disponíveis por pessoa
+	3 - Balanço de infectados e não infectados
