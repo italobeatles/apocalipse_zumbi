@@ -77,6 +77,11 @@ class SobreviventesC extends Controller {
 	 */
 	public function update(Request $request, $id) {
 		try {
+			$obj = new SobreviventesM();
+			if ($obj->informarSituacaoSobrevivente($id) == 1) {
+				print json_encode(array('status' => 'Zumbi não pode informar localização!'));
+				die();
+			}
 			$sobrevivente = SobreviventesM::find($id);
 			$sobrevivente->update($request->all());
 			print json_encode(array('status' => 'OK'));
@@ -102,7 +107,7 @@ class SobreviventesC extends Controller {
 	}
 
 	/**
-	 *Função que salva no banco de dados um aviso de contaminação
+	 * Função que salva no banco de dados um aviso de contaminação
 	 * @param $request Request
 	 * @return void
 	 * 	 */
