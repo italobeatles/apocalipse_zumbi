@@ -3,12 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/italo/html/teste_laravel/routes/web.php</file>
-            <file>file:/home/italo/html/teste_laravel/config/database.php</file>
-            <file>file:/home/italo/html/teste_laravel/routes/api.php</file>
-            <file>file:/home/italo/html/teste_laravel/app/Models/SobreviventesM.php</file>
-            <file>file:/home/italo/html/teste_laravel/app/Http/Controllers/api/SobreviventesC.php</file>
-            <file>file:/home/italo/html/teste_laravel/app/Models/SobreviventesRecursosM.php</file>
+            <file>file:/home/italo/html/apocalipse_zumbi/app/Http/Controllers/api/InventarioSobreviventesC.php</file>
+            <file>file:/home/italo/html/apocalipse_zumbi/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php</file>
+            <file>file:/home/italo/html/apocalipse_zumbi/app/Models/SobreviventesM.php</file>
+            <file>file:/home/italo/html/apocalipse_zumbi/routes/api.php</file>
+            <file>file:/home/italo/html/apocalipse_zumbi/LEIAME.txt</file>
+            <file>file:/home/italo/html/apocalipse_zumbi/app/Models/RecursosM.php</file>
+            <file>file:/home/italo/html/apocalipse_zumbi/app/Http/Controllers/api/InformarZumbificacaoC.php</file>
+            <file>file:/home/italo/html/apocalipse_zumbi/app/Http/Controllers/api/SobreviventesC.php</file>
         </group>
     </open-files>
 </project-private>

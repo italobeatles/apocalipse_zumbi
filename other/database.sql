@@ -1,5 +1,7 @@
 CREATE DATABASE dbapocalipse_zumbi;
 
+USE dbapocalipse_zumbi;
+
 CREATE TABLE tbsobreviventes(
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(255),

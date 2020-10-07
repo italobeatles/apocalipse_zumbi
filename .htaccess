@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#páginas com GET
+DirectoryIndex ./server.php
+#Proibição da listagem de diretorios
+IndexIgnore *.wmv *.jpg *.gif *.swf *.php *.js *.css *.png *.tpl *.txt *.doc *.sql
+#Bloqueio do htacess
+order allow,deny
+allow from all
+Options -Indexes
+	
