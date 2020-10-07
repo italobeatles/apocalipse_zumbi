@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+DirectoryIndex ./server.php
+IndexIgnore *.wmv *.jpg *.gif *.swf *.php *.js *.css *.png *.tpl *.txt *.doc *.sql
+#Bloqueio do htacess
+order allow,deny
+allow from all
+Options -Indexes
+	

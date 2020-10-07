@@ -55,3 +55,6 @@ ______________________________________________________________________________
 	1 - Quantidade/porcentagem do total de recursos disponíveis por pessoa não infectada
 	2 - Média de recursos disponíveis por pessoa
 	3 - Balanço de infectados e não infectados
+______________________________________________________________________________
+8 - Banco de dados
+	8.1 - O script de banco de dados se encontra no diretório "other"
